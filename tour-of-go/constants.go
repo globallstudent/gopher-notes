@@ -12,4 +12,3 @@ func main() {
 	const Truth = true
 	fmt.Println("Go rules?", Truth)
 }
-

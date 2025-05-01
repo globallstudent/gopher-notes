@@ -11,4 +11,3 @@ func main() {
 	var z uint = uint(f)
 	fmt.Println(x, y, z)
 }
-

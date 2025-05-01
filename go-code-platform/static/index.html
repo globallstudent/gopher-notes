@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Go Code Platform</title>
+</head>
+<body>
+  <h1>Submit Code</h1>
+  <textarea id="code" rows="15" cols="60">// Write your Go code here</textarea><br>
+  <button onclick="submitCode()">Submit</button>
+
+  <h2>Results:</h2>
+  <pre id="result">Waiting...</pre>
+
+  <script>
+    function submitCode() {
+      const code = document.getElementById('code').value;
+      fetch('/api/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ problem_id: 'sum', code })
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('result').textContent = data.results.join('\n');
+      });
+    }
+  </script>
+</body>
+</html>

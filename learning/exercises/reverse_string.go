@@ -12,7 +12,7 @@ func reverseString(s string) (result string) {
 	return
 }
 
-func reverseStringBetterWa(s string) (reversed string) {
+func reverseStringBetterWay(s string) (reversed string) {
 	var builder strings.Builder
 	runes := []rune(s)
 	for i := len(runes) - 1; i >= 0; i-- {
@@ -23,5 +23,5 @@ func reverseStringBetterWa(s string) (reversed string) {
 
 func main() {
 	fmt.Println(reverseString("Hello"))
-	fmt.Println(reverseStringBetterWa("Hello"))
+	fmt.Println(reverseStringBetterWay("Hello"))
 }

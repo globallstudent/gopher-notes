@@ -1,0 +1,10 @@
+basePath: /
+host: localhost:8080
+info:
+  contact: {}
+  description: Advanced authentication and authorization API with JWT and role-based
+    access control.
+  title: Gopher Notes Auth API
+  version: "1.0"
+paths: {}
+swagger: "2.0"
